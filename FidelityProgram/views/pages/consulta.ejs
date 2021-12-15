@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+    <%- include ('../partials/menu.ejs') %>
+    <div id="pagina">
+ <form action="/log/lista-consulta" method="GET">
+    <div class="form-row mt-2">
+        <div class="input-group col-md-6">
+            <select id="parametro" name="parametro"class="form-control bg-light" required>
+              <option selected value="todos">TODOS</option>
+              <option selected value="nome">Nome</option>
+              <option selected value="celular">Celular</option>
+              <option selected value="time">Time</option>
+              <option selected value="civil">Estado Civil</option>
+              <option selected value="bairro">Bairro</option>
+              <option selected value="profissao">Profissao</option>
+            </select>
+          </div>
+        <div class="input-group rounded col-md-6">
+            <input type="search" name="input" id="input" class="form-control rounded" placeholder="Search" aria-label="Search" required
+            aria-describedby="search-addon" />
+            <button id="btn" type="button" class="input-group-text border-0 bg-dark" id="search-addon">
+            <i style="color: white;"class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+ </form>
+ <div id="pagina">
+ <table class="table mt-2">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Celular</th>
+        <th scope="col">Profissao</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+</div>
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="/js/consulta.js"></script>
+</body>
+</html>

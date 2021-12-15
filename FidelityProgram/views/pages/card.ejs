@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <%- include ('../partials/menu.ejs') %>
+    <strong><p class="mt-5" style="text-align: center;">Olá <%-nome%>,</p></strong>
+    <p style="text-align: center;">Data do Ultimo Corte: <%-updatedAt%></p>
+    <div class="row d-flex justify-content-center mt-5">
+    <img src="/img/card/card<%-ETIQUETA%>.jpg" width="100%" class="col-md-5 col-12 ml-1 mr-1">
+    </div>
+    <strong><p class="mt-1" style="text-align: center; color: red;">Preencha todos os espaços para ganhar um corte grátis</p></strong>
+</body>
+</html>

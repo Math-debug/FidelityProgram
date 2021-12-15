@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <title>Painel</title>
+    <style>
+        .card-home {
+          padding: 30px 0 0 0;
+          width: 100%;
+          margin: 0 auto;
+        }
+      </style>
+</head>
+<body>
+    <%- include ('../partials/menu.ejs') %>
+    <div class="container">    
+        <div class="row">
+  
+          <div class="card-home">
+            <div class="card">
+              <div class="card-header">
+                Consulte seu QRCODE para acessar seu cartao
+              </div>
+              <div class="card-body">
+                <div>
+                  <div class="row d-flex justify-content-center">
+                    <a href="https://appundercut.herokuapp.com/log/card/<%-token%>">
+                      <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https://appundercut.herokuapp.com/log/card/<%-token%>" >
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Painel</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- estilos -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+		<!-- script -->
+		<script>
+			if(sessionStorage.getItem('token') == null){
+				sessionStorage.setItem('token','<%-token%>')
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<!-- menu -->
+		<div class="nav-side-menu">
+		    <div class="brand">BarberSystem</div>
+		    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+		  
+		        <div class="menu-list">
+		  
+		            <ul id="menu-content" class="menu-content collapse out">
+		                <li>
+		                  <a id="dash"href="#"><i class="fa fa-tachometer-alt sidebar-icon"></i> Dashboard</a>
+		                </li>
+                    <li>
+		                  <a id="cadastro" href="#"><i class="fas fa-pencil-alt sidebar-icon"></i> Cadastro</a>
+		                </li>
+                    <li>
+		                  <a id="consulta" href="#"><i class="fas fa-search sidebar-icon"></i> Consulta</a>
+		                </li>
+					</ul>
+		                
+		     </div>
+		</div>
+		<section>
+					<!-- paginas -->
+		<div class="main" id="pagina">
+			<div class="row mb-3">
+				<div class="col-md-6">
+				  <div class="card">
+				  <div class="card-header">
+					Aniversariantes do mes
+				  </div>
+				  <div class="card-body" id="aniversarios">
+					 
+				  </div>
+				</div>
+			  </div>
+			
+			</div>
+			<div class="row mb-3">
+				<div class="col-md-6">
+				  <div class="card">
+				  <div class="card-header">
+					Ag. Corte Fidelidade
+				  </div>
+				  <div class="card-body" id="fidelidade">
+					 
+				  </div>
+				</div>
+			  </div>
+			
+			</div>
+		</div>
+	</section>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="/js/script.js"></script>
+	</body>
+
+</html>

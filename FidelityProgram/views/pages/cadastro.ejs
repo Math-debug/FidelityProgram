@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="/js/cadastro.js"></script>
+    <title>Cadastro</title>
+</head>
+<body>
+    <%- include ('../partials/menu.ejs') %>
+    <form class="ml-2 mr-2 mt-2" method="POST" action="/log/cadastro">
+      <fieldset class="border p-2">
+        <legend class="w-auto">Informacoes Pessoais</legend>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome"class="form-control bg-light" id="nome" placeholder="Nome" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="apelido">Apelido</label>
+            <input type="text" class="form-control bg-light" id="apelido"name="apelido" placeholder="Apelido" required>
+          </div>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="aniversario">Data de Nascimento</label>
+            <input type="date" class="form-control bg-light" id="aniversario"name="aniversario" required>
+          </div> 
+          <div class="form-group col-md-6">
+            <label for="celular">Celular</label>
+            <input type="number" class="form-control bg-light" name="celular" id="celular" min="999999999" max="99999999999"placeholder="(12)988888888" required>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="border p-2">
+        <legend class="w-auto">Endereço</legend>
+        <div class="form-group col-md-3">
+          <label for="cep">CEP</label>
+          <input type="number" class="form-control bg-light" id="cep" name="cep" required>
+        </div>
+        <div class="form-group">
+          <label for="rua">Rua</label>
+          <input type="text" class="form-control bg-light" id="rua" name="rua" placeholder="Rua X" required>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="bairro">Bairro</label>
+          <input type="text" class="form-control bg-light" id="bairro" name="bairro" placeholder="CDD Bronks" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="numero">Numero</label>
+            <input type="number" class="form-control bg-light" id="numero" name="numero" required>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="border p-2">
+        <legend class="w-auto">Informacoes Adicionais</legend>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="time">Time</label>
+            <input type="text" class="form-control bg-light" id="time"name="time" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="civil">Estado Civil</label>
+            <select id="civil" name="civil"class="form-control bg-light" required>
+              <option selected value="">--</option>
+              <option value="Solteiro">Solteiro</option>
+              <option value="Casado">Casado</option>
+              <option value="Namorando">Namorando</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="profissao">Profissao</label>
+            <input type="text" class="form-control bg-light" id="profissao"name="profissao" required>
+          </div>
+        </div>
+      </fieldset>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" checked required>
+            <label class="form-check-label" for="gridCheck">
+              Autorizo a Undercut a Utilizar meus dados
+            </label>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+        <button type="submit" class="btn btn-dark mb-1">Cadastrar</button>
+        </div>
+      </form>
+</body>
+</html>
